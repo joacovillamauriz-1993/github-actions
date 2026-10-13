@@ -1,0 +1,17 @@
+#2. Manejo de Secretos: Simula un login. Usa un "Secreto" de GitHub para ocultar una contraseña y mostrarla de forma segura (enmascarada) en el log.
+
+name: Usar un secreto
+
+on:
+  workflow_dispatch:
+
+jobs:
+  login_simulado:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simular login
+        env:
+          PASSWORD: ${{ secrets.CONTRASENA_PRUEBA }}
+        run: |
+          echo "Iniciando sesión..."
+          echo "La contraseña leída es: $PASSWORD"
