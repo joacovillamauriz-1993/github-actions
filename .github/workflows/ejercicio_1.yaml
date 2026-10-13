@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mostrar valor de la Variable
-        run: echo "El curso es: $CURSO"
+        run: echo "El curso es $CURSO"
 
   job_b:
     name: Job B
     runs-on: ubuntu-latest
     steps:
       - name: Mostrar valor de la Variable
-        run: echo "El curso de Javi es: $CURSO"
+        run: echo "El curso de Javi es $CURSO"
