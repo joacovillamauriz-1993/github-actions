@@ -4,7 +4,6 @@ on:
     inputs:
       thename:
         description: 'What is your name?' 
-        required: true
 
 jobs:
   say_hello:
