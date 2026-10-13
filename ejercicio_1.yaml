@@ -1,0 +1,24 @@
+1. Variables de Entorno Globales: Crea un workflow que defina una variable de entorno a nivel de workflow y la use en dos jobs distintos.
+
+name: Use ENV with 2 jobs
+
+on:
+  workflow_dispatch:
+
+env:
+  CURSO: "Github Actions" # <-- Funciona globalmente
+
+jobs:
+  job_a:
+    name: Job A
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar valor de la Variable
+        run: echo "El curso es: $CURSO"    
+
+  job_b:
+    name: Job B
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar valor de la Variable
+        run: echo "El curso de Javi es: $CURSO"
