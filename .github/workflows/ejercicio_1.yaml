@@ -1,12 +1,10 @@
-#1. Variables de Entorno Globales: Crea un workflow que defina una variable de entorno a nivel de workflow y la use en dos jobs distintos.
-
 name: Use ENV with 2 jobs
 
 on:
   workflow_dispatch:
 
 env:
-  CURSO: "Github Actions" # Variable global a nivel de workflow
+  CURSO: "Github Actions"
 
 jobs:
   job_a:
